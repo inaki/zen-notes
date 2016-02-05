@@ -1,7 +1,6 @@
 angular.module('zenApp', ['ui.router', 'ngAnimate'])
 .config(function($stateProvider, $urlRouterProvider){
 
-      // For any unmatched url, send to /route1
       $urlRouterProvider.otherwise("/notes");
 
       $stateProvider
@@ -31,25 +30,19 @@ angular.module('zenApp', ['ui.router', 'ngAnimate'])
     scope: { value: '=' },
     template: '<span ng-click="edit()" ng-bind="value"></span><textarea ng-model="value" id="textarea" name="textarea" onkeyup="resizeTextarea(\'textarea\')" data-resizable="true"></textarea>',
     link: function ( $scope, element, attrs ) {
-      // Let's get a reference to the input element, as we'll want to reference it.
+      // Reference to the input element
       var inputElement = angular.element( element.children()[1] );
 
-      // This directive should have a set class so we can style it.
+      // adding the class to the DOM element
       element.addClass( 'edit-in-place' );
 
-      // Initially, we're not editing.
+      // Not editing yet
       $scope.editing = false;
 
-      // ng-click handler to activate edit-in-place
+      // ng-click function to activate edit-in-place
       $scope.edit = function () {
         $scope.editing = true;
-
-        // We control display through a class on the directive itself. See the CSS.
         element.addClass( 'active' );
-
-        // And we must focus the element.
-        // `angular.element()` provides a chainable array, like jQuery so to access a native DOM function,
-        // we have to reference the first element in the array.
         inputElement[0].focus();
       };
 
@@ -62,11 +55,12 @@ angular.module('zenApp', ['ui.router', 'ngAnimate'])
   };
 })
 .controller('MainCtrl', ['$scope', '$state', '$stateParams', function($scope, $state, $stateParams) {
-
+  // setting localStorage and paralel variables to go back and forward from localStorage and our variable array.
   $scope.saved = localStorage.getItem('notes');
   $scope.notes = (localStorage.getItem('notes')!==null) ? JSON.parse($scope.saved) : [];
   localStorage.setItem('notes', JSON.stringify($scope.notes));
 
+  // setting function for adding notes
   $scope.addNote = function() {
     $scope.notes.push({
       title: $scope.noteText.substr(0,15),
@@ -77,15 +71,14 @@ angular.module('zenApp', ['ui.router', 'ngAnimate'])
     localStorage.setItem('notes', JSON.stringify($scope.notes));
   };
 
-  console.log($scope.notes);
-
+  // setting function for deleting a note
   $scope.delete = function(index) {
-    console.log('delete');
     var oldNotes = $scope.notes;
     $scope.notes.splice(index, 1);
     localStorage.setItem('notes', JSON.stringify($scope.notes));
   };
 
+  // setting a function for updating a note
   $scope.updateNote = function(data){
     $scope.notes.push({
       title: data.substr(0,15),
@@ -96,11 +89,12 @@ angular.module('zenApp', ['ui.router', 'ngAnimate'])
     localStorage.setItem('notes', JSON.stringify($scope.notes));
   }
 
+  // getting the id from the url
   $scope.note = $scope.notes[$stateParams.id];
-  console.log($scope.note);
 
+  // function that help us change class for the transition effect
   $scope.changeTransition = function(input){
     $scope.transition = input;
-    console.log(input);
+
   };
 }]);
