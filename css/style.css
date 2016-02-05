@@ -1,0 +1,212 @@
+/*BASE STYLES*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background: RGBA(230, 230, 251, 0.2);
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 1.3rem;
+  color: black;
+  line-height: 32px;
+  line-height: 2rem;
+}
+.date {
+  color: darkgray;
+}
+
+/*NAVBAR STYLES*/
+.navbar {
+  font-size: 40px;
+  font-size: 40px;
+  font-size: 2.5rem;
+  color: indigo;
+  background: white;
+  background: url('../images/nav-background.svg') no-repeat;
+  position: fixed;
+  width: 100vw;
+  height: 56px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.left, .title, .right {
+  min-width: 100px;
+}
+h1 {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  color: white;
+  font-size: 32px;
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+/*LIST STYLE*/
+ul.note-list {
+  padding-top: 59px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+li {
+  border-radius: 4px;
+  margin: 3px 9px;
+  margin: 3px 9px;
+  margin: 0.2rem 0.6rem;
+  background: white;
+  padding: 16px 32px;
+  padding: 16px 32px;
+  padding: 1rem 2rem;
+}
+.typcn-times {
+  color: indigo;
+  float: right;
+  padding-top: 16px;
+  padding-top: 1rem;
+}
+.typcn-chevron-left {
+  color: white;
+}
+
+/*note styles*/
+.note-content {
+  background: RGBA(230, 230, 251, 0.2);
+  padding: 90px 30px;
+  height: 70vh;
+}
+.note-text {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.note-content textarea{
+  background: transparent;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+}
+
+.edit-in-place.active textarea {
+    display: inline-block;
+    width: 80vw;
+    height: 75vh;
+}
+
+/*edit in place*/
+.edit-in-place span {
+  cursor: pointer;
+}
+
+.edit-in-place textarea {
+  display: none;
+}
+
+.edit-in-place.active span {
+  display: none;
+}
+
+.edit-in-place.active textarea {
+  display: inline-block;
+}
+
+
+/* Transition effects */
+.l-one-whole {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.slide.ng-enter {
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+.slide.ng-enter-active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.slide.ng-leave {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.slide.ng-leave-active {
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+/*slide back*/
+.slide-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.slide-back.ng-enter,
+.slide-back.ng-leave {
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.slide-back.ng-enter {
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+.slide-back.ng-enter-active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.slide-back.ng-leave {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.slide-back.ng-leave-active {
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}

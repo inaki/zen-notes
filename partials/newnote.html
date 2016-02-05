@@ -1,0 +1,19 @@
+<div class="navbar">
+  <div class="left" style="text-align:left"><span ui-sref="notes" class="typcn typcn-chevron-left"></span></div>
+  <div class="title">Notes</div>
+  <div class="right" style="text-align:right"><span ui-sref="notes" ng-click="addNote();changeTransition('slide-back')" class="typcn typcn-tick-outline"></span></div>
+</div>
+
+<div class="note-content">
+  <span class="note-text">
+    <form data-ng-submit="addNote()" class="new-note">
+      <textarea
+          id="textarea"
+          onkeyup="resizeTextarea('textarea')" data-resizable="true"
+          data-ng-model="noteText"
+          rows="28" cols="40"
+          placeholder="Enter new note">
+      </textarea>
+    </form>
+  </span>
+</div>

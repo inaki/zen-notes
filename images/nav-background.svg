@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375px" height="55px" viewBox="0 0 375 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="375" height="55"></rect>
+        <rect id="path-3" x="0" y="0" width="296" height="130"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6" sketch:type="MSArtboardGroup">
+            <g id="nav-background" sketch:type="MSLayerGroup">
+                <mask id="mask-2" sketch:name="Mask" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <g id="rainbow" mask="url(#mask-2)">
+                    <g transform="translate(-158.000000, -75.000000)">
+                        <mask id="mask-4" sketch:name="Mask" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask" stroke="none" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
+                        <g id="rainbow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSLayerGroup" mask="url(#mask-4)">
+                            <g transform="translate(38.000000, 24.000000)" id="Oval-1" sketch:type="MSShapeGroup">
+                                <path d="M106,212 C164.542183,212 212,164.542183 212,106 C212,47.4578165 164.542183,0 106,0 C47.4578165,0 0,47.4578165 0,106 C0,164.542183 47.4578165,212 106,212 Z" fill="#D0011B"></path>
+                                <path d="M106.5,199 C158.138624,199 200,157.138624 200,105.5 C200,53.8613759 158.138624,12 106.5,12 C54.8613759,12 13,53.8613759 13,105.5 C13,157.138624 54.8613759,199 106.5,199 Z" fill="#F6A623"></path>
+                                <path d="M106,187 C150.735065,187 187,150.735065 187,106 C187,61.2649353 150.735065,25 106,25 C61.2649353,25 25,61.2649353 25,106 C25,150.735065 61.2649353,187 106,187 Z" fill="#F8E81C"></path>
+                                <path d="M106.5,174 C144.331505,174 175,143.331505 175,105.5 C175,67.6684946 144.331505,37 106.5,37 C68.6684946,37 38,67.6684946 38,105.5 C38,143.331505 68.6684946,174 106.5,174 Z" fill="#417505"></path>
+                                <path d="M106,161 C136.927946,161 162,135.927946 162,105 C162,74.072054 136.927946,49 106,49 C75.072054,49 50,74.072054 50,105 C50,135.927946 75.072054,161 106,161 Z" fill="#4990E2"></path>
+                                <path d="M106.5,149 C130.524387,149 150,129.524387 150,105.5 C150,81.4756134 130.524387,62 106.5,62 C82.4756134,62 63,81.4756134 63,105.5 C63,129.524387 82.4756134,149 106.5,149 Z" fill="#9012FE"></path>
+                                <path d="M107,137 C124.120827,137 138,123.120827 138,106 C138,88.8791728 124.120827,75 107,75 C89.8791728,75 76,88.8791728 76,106 C76,123.120827 89.8791728,137 107,137 Z" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

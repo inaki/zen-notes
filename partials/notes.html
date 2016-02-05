@@ -1,0 +1,12 @@
+<div class="navbar">
+  <div class="left" style="text-align:left"></div>
+  <div class="title">Notes</div>
+  <div class="right" style="text-align:right"><span ng-click="changeTransition('slide')" ui-sref="newnote" class="typcn typcn-plus-outline"></span></div>
+</div>
+<ul id="note-list-js" class="note-list">
+  <li ng-repeat="note in notes">
+    <a ui-sref="notes.detail({id:$index})" ng-click="changeTransition('slide')">{{ note.title }}...</a> <span data-ng-click="delete($index)" class="typcn typcn-times"></span>
+    <br>
+    <span class="date">{{ note.date | date:'MM/dd/yyyy' }}</span>
+  </li>
+</ul>
